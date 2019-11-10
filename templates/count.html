@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Page</title>
+</head>
+<body>
+    <h1>COUNT!!</h1>
+    <p>The are {{count}} words in your sentence.</p>
+    <h3>Your Text:</h3>
+        {{full}}
+    <h2>COUNTED:</h2>
+        {% for words, counttotal in sorted %}
+        {{words}}- {{counttotal}}
+        <br>
+        
+        {% endfor %}
+
+        <h3>About the Website:</h3>
+        <button><a href="{% url 'about' %}">About</a></button>
+
+        <h4>Wanna Start Again?</h4>
+        <form action=""  >
+            <button><a href="{% url 'home' %}">Start Again</a></button>
+        </form>
+</body>
+</html>
